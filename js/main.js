@@ -53,7 +53,7 @@
                     }
                 }
 
-                function HideSubMenu(element) {                    
+                function HideSubMenu(element) {
                     element.find('.' + dima_hover).removeClass(dima_hover);
                 }
 
@@ -178,15 +178,15 @@
 
                 /**
                  * Mobile
-                 */            
+                 */
                 dima_sub_icon.find('>a').each(function(n) {
                      $(this).append('<div class="dima-sub-toggle" data-toggle="collapse" data-target=".sub-menu.sm-' + n + '"><span class="sub-icon"></span></div>')
                 }),
-                m.each(function(n) {                    
+                m.each(function(n) {
                     $(this).addClass("sm-" + n + " collapse");
                 }), $(".dima-sub-toggle").on("click", function(n) {
                     n.preventDefault(), $(this).toggleClass(u).closest("li").toggleClass(u)
-                }); 
+                });
             };
              var inline_cenet_logo = function() {
                 var dima_header_style_split = $('.dima-navbar-center');
@@ -216,11 +216,11 @@
             var searchBox = function() {
                 //search box event
                 var bool = true;
-                $(".search-btn").click(function(e) {                    
+                $(".search-btn").click(function(e) {
                     e.preventDefault();
                     var x = $($(this).parent().parent().parent().parent());
                     if (bool) {
-                        
+
                         x.find("#search-box").stop().slideDown(250, "easeOutExpo");
                         $("#search-box input[type=text]").focus();
                         bool = false;
@@ -288,7 +288,7 @@
         // Handles twitter,instagram,flickr API
         PIXELDIMA.API = function() {
             var twitter = function() {
-                tw.each(function() {                    
+                tw.each(function() {
                     var lem = $(this),
                         id = lem.attr("data-id"),
                         type = lem.attr("data-type"),
@@ -477,7 +477,7 @@
             };
             return build;
         }();
-        // Handles scrollable contents using jQuery sly and perfect scrollbar  
+        // Handles scrollable contents using jQuery sly and perfect scrollbar
         PIXELDIMA.SCROLL = function() {
             var localScroll = function() {
                 $(".dima-nav").localScroll({
@@ -768,7 +768,8 @@
                 var d, i, m, a, p;
                 d = $(".fullscreenOnePage").show().revolution({
                     dottedOverlay: "none",
-                    delay: 9000,
+                    delay: 4000,
+                    // delay: 9000,
                     startwidth: 1170,
                     startheight: 700,
                     hideThumbs: 200,
@@ -819,7 +820,11 @@
                     hideCaptionAtLimit: 0,
                     hideAllCaptionAtLilmit: 0,
                     startWithSlide: 0,
-                    fullScreenOffsetContainer: ""
+                    fullScreenOffsetContainer: "",
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    gridwidth:[1240, 1024, 778, 480],
+                    gridheight:[400, 768, 960, 720],
+                    visibilityLevels:[1240, 1024, 1024, 480]
                 });
                 i = $(".fullscreen").show().revolution({
                     dottedOverlay: "none",
@@ -874,10 +879,15 @@
                     hideCaptionAtLimit: 0,
                     hideAllCaptionAtLilmit: 0,
                     startWithSlide: 0,
-                    fullScreenOffsetContainer: "header"
+                    fullScreenOffsetContainer: "header",
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    gridwidth:[1240, 1024, 778, 480],
+                    gridheight:[400, 768, 960, 720],
+                    visibilityLevels:[1240, 1024, 1024, 480]
                 });
                 m = jQuery('.minfullwidth').show().revolution({
-                    delay: 15000,
+                    // delay: 15000,
+                    delay: 4000,
                     dottedOverlay: "none",
                     startwidth: 1170,
                     startheight: 650,
@@ -910,7 +920,11 @@
                     navigationVAlign: "bottom",
                     navigationHOffset: 0,
                     navigationVOffset: 35,
-                    fullScreenOffsetContainer: ""
+                    fullScreenOffsetContainer: "",
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    gridwidth:[1240, 1024, 778, 480],
+                    gridheight:[400, 768, 960, 720],
+                    visibilityLevels:[1240, 1024, 1024, 480]
                 });
                 p = jQuery('.photoslide').show().revolution({
                     delay: 4000,
@@ -940,7 +954,11 @@
                     navigationVAlign: "bottom",
                     navigationHOffset: 0,
                     navigationVOffset: 35,
-                    fullScreenOffsetContainer: ""
+                    fullScreenOffsetContainer: "",
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    gridwidth:[1240, 1024, 778, 480],
+                    gridheight:[400, 768, 960, 720],
+                    visibilityLevels:[1240, 1024, 1024, 480]
                 });
             };
             var init = function() {
@@ -961,7 +979,7 @@
                     i = $('[data-lightbox="iframe"]'),
                     m = $('[data-lightbox="ajax"]'),
                     a = $('[data-lightbox="gallery"]');
-                //image    
+                //image
                 d.magnificPopup({
                     type: 'image',
                     closeOnContentClick: !0,
@@ -1127,7 +1145,7 @@
                             elm.find('.progress-bar .percent').css('background-color', color);
                             elm.find('span').css('border-top-color', color);
                         });
-                        //circular                
+                        //circular
                         $('.dial').each(function() {
                             var elm = $(this),
                                 width = elm.attr("data-width"),
@@ -1200,7 +1218,7 @@
                         "background-repeat": "no-repeat",
                     });
                 });
-                
+
             };
             var datepicker = function() {
                 var elm = $("[data-datepicker]");
@@ -1233,7 +1251,7 @@
         PIXELDIMA.EVENT = function() {
             var event = function() {
                 $('input, textarea').placeholder();
-                //Fix The Navbar 
+                //Fix The Navbar
                 if (windowWidth > 960) {
                     if ($('.dima-navbar').hasClass('fix-one')) {
                         $(".fix-one").fix_navbar();
@@ -1400,7 +1418,7 @@
                                 columnWidth: '.isotope-item',
                                 //isFitWidth: true
                                 //gutter: 1,
-                             },                             
+                             },
                              percentPosition: true
                         });
                     });
@@ -1417,7 +1435,7 @@
                 });
                 // Infinite Scroll
                 $containers.infinitescroll({
-                        navSelector: '#page_nav', // selector for the paged navigation 
+                        navSelector: '#page_nav', // selector for the paged navigation
                         nextSelector: '#page_nav a', // selector for the NEXT link (to page 2)
                         itemSelector: '.isotope-item',
                         bufferPx: 200,
@@ -1448,7 +1466,7 @@
             };
             return READY;
         }();
-        // Handles Ajax Contact validation  
+        // Handles Ajax Contact validation
         PIXELDIMA.CONTACT = function() {
             var contect = function() {
                 var contact = $("#contact"),
@@ -1479,7 +1497,7 @@
                             },
                             complete: function() {
                                 $("#contact").removeClass('loading-form');
-                                // Reset Form                            
+                                // Reset Form
                                 $("#contact").find('.field').removeClass("success").removeClass("error").find("input").val("");
                             }
                         });
@@ -1499,11 +1517,11 @@
                             required: true
                         }
                     },
-                    //error input 
+                    //error input
                     highlight: function(element) {
                         $(element).parent().removeClass("success").addClass("error");
                     },
-                    //success input 
+                    //success input
                     success: function(element) {
                         $(element).parent().removeClass("error").addClass("success").find("label.error").remove();
                     },
@@ -1542,7 +1560,7 @@
                             },
                             complete: function() {
                                 $("#checkout").removeClass('loading-form');
-                                // Reset Form                            
+                                // Reset Form
                                 $("#checkout").find('.field').removeClass("success").removeClass("error").find("input").val("");
                             }
                         });
@@ -1574,11 +1592,11 @@
                             required: true,
                         },
                     },
-                    //error input 
+                    //error input
                     highlight: function(element) {
                         $(element).parent().removeClass("success").addClass("error");
                     },
-                    //success input 
+                    //success input
                     success: function(element) {
                         $(element).parent().removeClass("error").addClass("success").find("label.error").remove();
                     },
