@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
     $.gmap3({
-        key: 'YOUR API KEY HERE'
+        key: 'AIzaSyB8st7o-JH7YY6uGfQALaw5bJudCWq8cmo'
     });
 
 

@@ -6,6 +6,25 @@
 <html class="no-js" style="overflow-x:hidden;">
 <!--<![endif]-->
 <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67615801-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-67615801-1');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TKXDJPS');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,6 +64,11 @@
 </head>
 <body class="responsive" id="demo-construction">
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKXDJPS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- HEADER -->
   <header role="banner">
     <!-- DESKTOP MENU -->
@@ -55,7 +79,9 @@
           <div class="container">
             <ul class="float-start text-start dima-menu">
               <li>
-                <a data-animated-link="fadeOut" href="#"><i class="fa fa-map-marker"></i>325 Main Street Unit 19 | Kentville NS B4N5E4</a>
+                <a data-animated-link="fadeOut" href="https://www.google.ca/maps/place/325+Main+St,+Kentville,+NS+B4N+1K5/@45.0771144,-64.495405,17z/data=!3m1!4b1!4m5!3m4!1s0x4b5856d7bb614b7d:0x192b3470a961a530!8m2!3d45.0771106!4d-64.4932163"><i class="fa fa-map-marker"></i>325 Main Street Unit 19 | Kentville NS B4N5E4</a>
+
+                <!-- 45.077353,-64.493216 LONG AND LAT FOR ADDRESS-->
               </li>
               <li>
                 <a data-animated-link="fadeOut" href="tel:+19026780275"><i class="fa fa-phone"></i>+1 (902) 678-0275</a>
@@ -397,6 +423,10 @@
 
     <!-- TOP FOOTER -->
     <div class="top-footer" style="">
+      <!-- 45.077353,-64.493216 LONG AND LAT FOR ADDRESS-->
+      <div class="box" style="margin-bottom:50px;">
+        <div id="map1" data-lat="45.077353" data-lng="-64.493216"></div>
+      </div>
       <div class="container">
         <div class="ok-row">
           <!-- ABOUT US WIDGET -->
@@ -440,7 +470,7 @@
                 </li>
                 <li>
                   <i class="fa fa-envelope"></i>
-                  <a data-animated-link="fadeOut" href="mailto:+19026780275"><p>info@safeguardservices.ca</p></a>
+                  <a data-animated-link="fadeOut" href="mailto:info@safeguardservices.ca"><p>info@safeguardservices.ca</p></a>
                 </li>
               </ul>
             </div>
